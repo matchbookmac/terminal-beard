@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'terminal-hair',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https://YOUR-FIREBASE-NAME.firebaseio.com/',
+    firebase: 'https://glowing-inferno-9850.firebaseio.com',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -24,10 +24,10 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
-      'connect-src': "'self' https://congress.api.sunlightfoundation.com",
+      'connect-src': "'self' https://glowing-inferno-9850.firebaseio.com",
       'img-src': "'self'",
       'style-src': "'self' 'unsafe-inline'",
-      'frame-src': "'none' https://congress.api.sunlightfoundation.com"
+      'frame-src': "'none' https://glowing-inferno-9850.firebaseio.com"
     }
 
   };

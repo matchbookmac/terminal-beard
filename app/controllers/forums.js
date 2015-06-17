@@ -7,7 +7,9 @@ export default Ember.Controller.extend({
       var newPost = this.store.createRecord('post', {
         subject: this.get('subject'),
         body:    this.get('body'),
-        author:  this.get('author')
+        author:  this.get('author'),
+        date:  new Date()
+
       });
       newPost.save();
       this.setProperties({

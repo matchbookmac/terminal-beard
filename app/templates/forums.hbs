@@ -27,7 +27,7 @@
   <br>
     <ul class="list-unstyled">
       {{#each post in model}}
-        <li>{{#link-to 'post' post.id}}<p class="lead">{{post.subject}}</p>{{/link-to}}</li>
+        <li><span class="muted">{{post-date post.date}}</span>{{#link-to 'post' post.id}}<p class="lead">{{post.subject}}</p>{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>

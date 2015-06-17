@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Terminal Hair</a>
+      <a class="navbar-brand" href="/">Terminal Hair</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,7 +17,8 @@
         <li>{{#link-to 'about'}}About{{/link-to}}</li>
         <li>Reviews</li>
         <li>{{#link-to 'forums'}}Forum{{/link-to}}</li>
-        <li>submit</li>
+        <li>{{#link-to 'submit-beard'}}Submit A Beard{{/link-to}}</li>
+        <li>{{#link-to 'beards'}}View Beards{{/link-to}}</li>
         <li>review</li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -26,5 +27,5 @@
 
 
 <div class="container">
-  {{outlet}}  
+  {{outlet}}
 </div>

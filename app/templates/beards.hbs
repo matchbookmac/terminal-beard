@@ -1,0 +1,18 @@
+{{#if newBeard}}
+
+  {{partial 'beards/submit-beard'}}
+
+{{else}}
+
+  <div class="col-md-4">
+  <button class="btn btn-info" {{action 'newBeard'}}>Submit Your Beard</button>
+  <br>
+  <br>
+    <ul class="list-unstyled">
+      {{#each beard in model}}
+        <li><span class="muted">{{post-date beard.date}}</span>{{#link-to 'beard' beard.id}}<p class="lead">{{beard.name}}</p>{{/link-to}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+{{/if}}

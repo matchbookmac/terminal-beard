@@ -1,0 +1,91 @@
+<div class="col-md-8 col-md-offset-2">
+  <h3 class="text-center">Submit Your Beard For Review</h3>
+  <br>
+  <form>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-md-4 control-label">Your Beard's Name</label>
+        <div class="col-md-8">
+          {{input value=name type="text" class="form-control"}}
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="picture" class="col-md-4 control-label">Beard Picture</label>
+        <div class="col-md-8">
+          {{input value=picture type="text" class="form-control" placeholder="URL link"}}
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="type" class="col-md-4 control-label">Beard Type</label>
+        <div class="col-md-8">
+          {{view "select" content=types value=selectedType class="form-control"}}
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="date" class="col-md-4 control-label">Beard Birth Date</label>
+        <div class="col-md-8">
+          {{input value=startDate type="date" class="form-control"}}
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="length" class="col-md-4 control-label">Beard Length</label>
+        <div class="col-md-8">
+          <div class="input-group">
+            {{input value=length type="text" class="form-control" placeholder="Measure from tip of chin"}}
+            <div class="input-group-addon">cm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="width" class="col-md-4 control-label">Beard Width</label>
+        <div class="col-md-8">
+          <div class="input-group">
+            {{input value=width type="text" class="form-control" placeholder="Measured tip of hairs at its widest point"}}
+            <div class="input-group-addon">cm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="girth" class="col-md-4 control-label">Beard Girth</label>
+        <div class="col-md-8">
+          <div class="input-group">
+            {{input value=girth type="text" class="form-control" placeholder="Measured from chin to sternum"}}
+            <div class="input-group-addon">cm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="density" class="col-md-4 control-label">Beard Desity</label>
+        <div class="col-md-8">
+          <div class="input-group">
+            {{input value=density type="text" class="form-control" placeholder="Folicles per square cm"}}
+            <div class="input-group-addon">cm<sup>2</sup></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button name="button" class="btn btn-info" {{action 'submitBeard'}}>Submit Your Beard</button>
+  </form>
+
+  {{#if model.picture}}
+    <div class="center-block">
+      <img src="{{model.picture}}" class="img-rounded img-responsive" alt="Your Beard" />
+    </div>
+  {{/if}}
+
+</div>

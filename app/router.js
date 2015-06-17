@@ -6,10 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('about');
+  this.resource('about', { path: '/' });
   this.resource('forums', function(){
-    this.resource('post', {path: ':post_id'});
+    this.resource('post', { path: ':post_id' });
   });
+  this.resource('beards', function () {
+    this.resource('submit-beard', { path: 'new' });
+  })
 });
 
 export default Router;

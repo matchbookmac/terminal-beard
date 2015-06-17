@@ -1,11 +1,11 @@
 <div class="">
-  <span class="lead">
+  <span class="muted">{{post-date post.date}} {{model.author}} wrote:</span>
+  <p class="lead">
     {{model.subject}}
-  </span>
-  <span class="muted">
-    by {{model.author}}
-  </span>
+  </p>
   <p>
     {{model.body}}
   </p>
+
+  <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
 </div>

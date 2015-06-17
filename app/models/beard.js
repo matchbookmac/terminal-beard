@@ -9,5 +9,5 @@ export default DS.Model.extend({
   width:   DS.attr('number'),
   girth:   DS.attr('number'),
   density: DS.attr('number'),
-  reviews: DS.hasMany('review')
+  reviews: DS.hasMany('review', {async: true})
 });

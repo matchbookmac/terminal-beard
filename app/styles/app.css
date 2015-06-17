@@ -66,3 +66,16 @@ font-family: 'IM Fell DW Pica', serif;
   border-color: #8D1D1D;
   color: #c8c8c8;
 }
+
+.btn-primary {
+  background-image: linear-gradient(#7a8288, #7a8288 60%, #7a8288);
+  border-color: #7a8288;
+  color: #c8c8c8;
+}
+
+.btn-primary:hover {
+  background-image: linear-gradient(#858E95, #858E95 60%, #858E95);
+  font-weight: bold;
+  border-color: #858E95;
+  color: #c8c8c8;
+}

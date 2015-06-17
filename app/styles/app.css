@@ -13,3 +13,56 @@ nav .active {
 .muted {
  opacity: 0.5;
 }
+
+.thumbnail {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-size: 100%;
+  box-shadow: 10px 10px 10px rgba( 85, 15, 7, 0.5);
+
+}
+
+.backbeard {
+  background-color: rgba( 255, 237, 229, 0.5);
+  background-size: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.float {
+  background-color: rgba( 255, 237, 229, 0.8);
+}
+
+.fancyfont {
+font-family: 'IM Fell DW Pica', serif;
+}
+
+#title {
+  font-size: 75px;
+}
+
+.btn-info {
+  background-image: linear-gradient(#57368E, #57368E 60%, #57368E);
+  border-color: #57368E;
+  color: #c8c8c8;
+}
+
+.btn-info:hover {
+  background-image: linear-gradient(#5F3B9B, #5F3B9B 60%, #5F3B9B);
+  font-weight: bold;
+  border-color: #5F3B9B;
+  color: #c8c8c8;
+}
+
+.btn-danger {
+  background-image: linear-gradient(#801A1A, #801A1A 60%, #801A1A);
+  border-color: #801A1A;
+  color: #c8c8c8;
+}
+
+.btn-danger:hover {
+  background-image: linear-gradient(#8D1D1D, #8D1D1D 60%, #8D1D1D);
+  font-weight: bold;
+  border-color: #8D1D1D;
+  color: #c8c8c8;
+}

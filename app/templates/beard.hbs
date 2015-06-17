@@ -1,0 +1,69 @@
+
+<div>
+  <div>
+    <div class="col-md-5">
+      <img src="{{model.picture}}" class="img-rounded img-responsive">
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="text-center fancyfont" id="title">{{model.name}}</h1>
+      </div>
+      <div class="col-md-6 well">
+        <p class="lead">
+          Type: {{model.type}}
+        </p>
+        <p class="lead">
+          Began Growth: {{model.date}}
+        </p>
+      </div>
+      <div class="col-md-6 well">
+        <table class="table">
+          <caption><p class="lead">Stats</p></caption>
+          <thead>
+            <tr>
+              <th>Length</th>
+              <th>Width</th>
+              <th>Girth</th>
+              <th>Density</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{model.length}}</td>
+              <td>{{model.width}}</td>
+              <td>{{model.girth}}</td>
+              <td>{{model.density}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+
+    {{#if newReview}}
+      <div class="col-md-6 col-md-offset-5">
+
+        {{partial 'beard/review'}}
+      </div>
+
+    {{else}}
+      <button class="btn btn-info btn-block" {{action 'addReview'}}>Review the <strong>{{model.name}}</strong> Beard</button>
+    {{/if}}
+
+
+
+
+    <div class="row">
+      <ul class="list-unstyled">
+        {{#each review in model.reviews}}
+          <li>
+            {{review.author}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<br>
+<button class="btn btn-danger btn-block"{{action 'delete'}}>Delete</button>

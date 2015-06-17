@@ -12,7 +12,8 @@ Router.map(function() {
   });
   this.resource('beards', function () {
     this.resource('submit-beard', { path: 'new' });
-  })
+  });
+  this.resource('beard', { path: 'beards/:beard_id'});
 });
 
 export default Router;

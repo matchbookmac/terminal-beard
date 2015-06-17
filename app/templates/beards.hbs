@@ -15,4 +15,19 @@
     </ul>
   </div>
 
+  <h1>Hot Local Organic Beards</h1>
+  {{#each beard in model}}
+    <div class="col-md-3">
+      {{#link-to 'beard' beard.id}}
+        <div class="thumbnail" style="background-image: url({{beard.picture}})">
+          <p class="lead text-center">
+            {{beard.name}}
+          </p>
+        </div>
+      {{/link-to}}
+    </div>
+  {{/each}}
+
 {{/if}}
+
+{{outlet}}

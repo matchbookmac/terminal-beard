@@ -25,7 +25,7 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
       'font-src': "'self'",
       'connect-src': "'self' https://glowing-inferno-9850.firebaseio.com",
-      'img-src': "'self'",
+      'img-src': "",
       'style-src': "'self' 'unsafe-inline'",
       'frame-src': "'none' https://glowing-inferno-9850.firebaseio.com"
     }

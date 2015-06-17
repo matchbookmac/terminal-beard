@@ -1,0 +1,30 @@
+{{#if newPost}}
+
+  <form>
+    <div class="form-group">
+      <div class="form-inline">
+        <label for="subject">Subject</label>
+        {{input value=subject class="form-control"}}
+      </div>
+      <div class="form-inline">
+        <label for="body"></label>
+        {{input value=body class="form-control"}}
+      </div>
+      <div class="form-inline">
+        <label for="author"></label>
+        {{input value=author class="form-control"}}
+      </div>
+    </div>
+
+    <button class="btn btn-primary" {{action 'submit'}}>Submit</button>
+  </form>
+
+{{else}}
+
+  {{#link-to 'new-post'}}New Post{{/link-to}}
+
+
+{{/if}}
+
+
+{{outlet}}

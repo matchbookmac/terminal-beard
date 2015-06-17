@@ -13,9 +13,10 @@ export default Ember.Controller.extend({
         author: this.get('author'),
         body: this.get('body'),
       });
-      review.save();
-      beard.get('reviews').pushObject(review);
-      beard.save();
+      review.save().then(function() {
+        beard.get('reviews').pushObject(review);
+        beard.save();
+      });
       this.set('newReview', false);
       this.transitionToRoute('beard', beard.id);
     },

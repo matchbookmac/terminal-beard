@@ -79,3 +79,7 @@ font-family: 'IM Fell DW Pica', serif;
   border-color: #858E95;
   color: #c8c8c8;
 }
+
+.nopad {
+  padding: -15px;
+}

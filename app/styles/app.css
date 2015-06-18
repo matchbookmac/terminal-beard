@@ -17,9 +17,27 @@ nav .active {
 .thumbnail {
   border-radius: 5px;
   margin-bottom: 20px;
-  background-size: 100%;
-  box-shadow: 10px 10px 10px rgba( 85, 15, 7, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 10px 10px 10px rgba( 0, 0, 0, 0.5);
+}
 
+.item {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 136.25px;
+}
+
+.vertical-align {
+  line-height: 136.25px;
+  vertical-align: middle;
+}
+
+.profile-picture {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .backbeard {

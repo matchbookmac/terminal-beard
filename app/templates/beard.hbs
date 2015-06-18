@@ -1,53 +1,60 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center fancyfont" id="title">{{model.name}}</h1>
+  </div>
+  <div class="col-md-5">
+    <div class="img-rounded img-responsive profile-picture" style="background-image: url({{model.picture}})">
+    </div>
+  </div>
+  <div class="col-md-7 well">
+    <p class="lead">
+      Type: {{model.type}}
+    </p>
+    <p class="lead">
+      Began Growth: {{model.date}}
+    </p>
+  </div>
+  <div class="col-md-7 well">
+    <table class="table">
+      <caption><p class="lead">Stats</p></caption>
+      <thead>
+        <tr>
+          <th>Length</th>
+          <th>Width</th>
+          <th>Girth</th>
+          <th>Density</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{model.length}}</td>
+          <td>{{model.width}}</td>
+          <td>{{model.girth}}</td>
+          <td>{{model.density}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
-    <div class="col-md-5">
-      <img src="{{model.picture}}" class="img-rounded img-responsive">
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h1 class="text-center fancyfont" id="title">{{model.name}}</h1>
-      </div>
-      <div class="col-md-6 well">
-        <p class="lead">
-          Type: {{model.type}}
-        </p>
-        <p class="lead">
-          Began Growth: {{model.date}}
-        </p>
-      </div>
-      <div class="col-md-6 well">
-        <table class="table">
-          <caption><p class="lead">Stats</p></caption>
-          <thead>
-            <tr>
-              <th>Length</th>
-              <th>Width</th>
-              <th>Girth</th>
-              <th>Density</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{model.length}}</td>
-              <td>{{model.width}}</td>
-              <td>{{model.girth}}</td>
-              <td>{{model.density}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+{{#if newReview}}
+  <div class="col-md-6 col-md-offset-5 nopad">
+
+    {{partial 'beard/review'}}
     <br>
+  </div>
 
-    {{#if newReview}}
-      <div class="col-md-6 col-md-offset-5 nopad">
-
-        {{partial 'beard/review'}}
-        <br>
-      </div>
-
-    {{else}}
+{{else}}
+  <br>
+  <div class="row">
+    <br>
+    <div class="col-md-12">
       <button class="btn btn-info btn-block" {{action 'addReview'}}>Review the <strong>{{model.name}}</strong> Beard</button>
-    {{/if}}
+
+    </div>
+
+  </div>
+{{/if}}
 
 
 <br>
@@ -71,3 +78,5 @@
 
 <br>
   <button class="btn btn-danger btn-block"{{action 'delete'}}>Delete</button>
+<br>
+<br>

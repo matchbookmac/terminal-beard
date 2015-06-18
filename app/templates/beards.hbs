@@ -4,30 +4,33 @@
 
 {{else}}
 
-  <div class="col-md-4">
+  <div class="col-md-3">
   <button class="btn btn-info" {{action 'newBeard'}}>Submit Your Beard</button>
   <br>
   <br>
     <ul class="list-unstyled">
       {{#each beard in model}}
-        <li><span class="muted">{{post-date beard.date}}</span>{{#link-to 'beard' beard.id}}<p class="lead">{{beard.name}}</p>{{/link-to}}</li>
+        <li><span class="muted">{{post-date beard.date}}</span>{{#link-to 'beard' beard.id}}<p class="lead fancyfont">{{beard.name}}</p>{{/link-to}}</li>
       {{/each}}
     </ul>
   </div>
 
-  <h1>Hot Local Organic Beards</h1>
-  {{#each beard in model}}
-    <div class="col-md-3">
-      {{#link-to 'beard' beard.id}}
-        <div class="thumbnail" style="background-image: url({{beard.picture}})">
-          <p class="lead text-center">
-            {{beard.name}}
-          </p>
+    <div class="col-md-9 well">
+      <h1 class="text-center title fancyfont">Hot Local Organic Beards</h1>
+      {{#each beard in model}}
+        <div class="col-md-3">
+            {{#link-to 'beard' beard.id}}
+              <div class="thumbnail" style="background-image: url({{beard.picture}})">
+                <div class="item">
+                  <p class="lead text-center fancyfont vertical-align">
+                    {{beard.name}}
+                  </p>
+                </div>
+              </div>
+            {{/link-to}}
         </div>
-      {{/link-to}}
+      {{/each}}
     </div>
-  {{/each}}
-
 {{/if}}
 
 {{outlet}}

@@ -1,7 +1,12 @@
 # Terminal-hair
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+This is an app written using Ember-cli.  It is a app to rate beards.  Users can build a beard profile and have their beards rated on specific criteria.  There is also a forum included where users can create discussion about beards.
+
+Beard images use urls and not uplaoding.
+
+Silliness.
 
 ## Prerequisites
 
@@ -50,4 +55,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-

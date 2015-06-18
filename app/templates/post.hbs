@@ -1,11 +1,43 @@
-<div class="">
   <span class="muted">{{post-date post.date}} {{model.author}} wrote:</span>
+  <button class="btn btn-xs btn-danger pull-right" {{action 'deletePost'}}>Delete Post</button>
   <p class="lead">
     {{model.subject}}
   </p>
+
   <p>
     {{model.body}}
   </p>
+  <div class="row ">
+    <form>
+      <div class="form-horizontal">
+        <div class="form-group">
+            {{input value=author type="text" class="form-control" required="required" placeholder="Your Name"}}
+        </div>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+            {{textarea value=body type="text" class="form-control" rows="2" placeholder="Your Reply"}}
+        </div>
+      </div>
+      <button class="btn btn-primary btn-block "  {{action 'submitComment'}}>Submit Comment</button>
+    </form>
+  </div>
 
-  <button class="btn btn-danger" {{action 'deletePost'}}>Delete</button>
-</div>
+  <div class="row ">
+    <ul class="list-unstyled">
+      {{#each comment in model.comments}}
+        <li class="well">
+          <blockquote>
+            <p>
+              {{comment.body}}
+
+
+
+              <button class="btn btn-danger btn-xs pull-right"{{action 'deleteComment' comment}}>X</button>
+            </p>
+            <footer><cite>{{comment.author}}</cite></footer>
+          </blockquote>
+        </li>
+      {{/each}}
+    </ul>
+  </div>

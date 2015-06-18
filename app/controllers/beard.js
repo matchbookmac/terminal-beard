@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
       allRatings.forEach(function (rating) {
         sum += parseInt(rating.get('rating'));
       });
-      var avgRating = sum/(parseInt(allRatings.get('length')) + 1);
+      var avgRating = Math.ceil(sum/(parseInt(allRatings.get('length')) + 1));
       beard.set('avgRating', avgRating).save();
 
       review.save().then(function() {

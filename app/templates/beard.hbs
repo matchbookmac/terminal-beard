@@ -14,26 +14,26 @@
       Type: {{model.type}}
     </p>
     <p class="lead">
-      Began Growth: {{model.date}}
+      Began Growth: {{beard-birth model.date}}
     </p>
   </div>
   <div class="col-md-7 well">
     <table class="table">
-      <caption><p class="lead">Stats</p></caption>
+      <caption><p class="lead text-center">{{model.name}}'s Stats</p></caption>
       <thead>
         <tr>
-          <th>Length</th>
-          <th>Width</th>
-          <th>Girth</th>
-          <th>Density</th>
+          <th class="text-center">Length</th>
+          <th class="text-center">Width</th>
+          <th class="text-center">Girth</th>
+          <th class="text-center">Density</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{{model.length}} cm</td>
-          <td>{{model.width}} cm</td>
-          <td>{{model.girth}} cm</td>
-          <td>{{model.density}} folicles/cm<sup>2</sup></td>
+          <td class="text-center">{{model.length}} cm</td>
+          <td class="text-center">{{model.width}} cm</td>
+          <td class="text-center">{{model.girth}} cm</td>
+          <td class="text-center">{{model.density}} folicles/cm<sup>2</sup></td>
         </tr>
       </tbody>
     </table>
@@ -41,7 +41,7 @@
 </div>
 
 {{#if newReview}}
-  <div class="col-md-6 col-md-offset-5 nopad">
+  <div class="col-md-7 col-md-offset-5">
 
     {{partial 'beard/review'}}
     <br>

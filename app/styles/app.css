@@ -2,10 +2,6 @@
    font-weight: bold;
 }
 
-body {
- padding-top: 70px;
-}
-
 nav .active {
    font-weight: bold;
 }
@@ -30,7 +26,7 @@ nav .active {
 }
 
 .vertical-align {
-  line-height: 136.25px;
+  line-height: 68.125px;
   vertical-align: middle;
 }
 
@@ -74,8 +70,8 @@ font-family: 'IM Fell DW Pica', serif;
 }
 
 .btn-danger {
-  background-image: linear-gradient(#801A1A, #801A1A 60%, #801A1A);
-  border-color: #801A1A;
+  background-image: linear-gradient(#701414, #701414 60%, #701414);
+  border-color: #701414;
   color: #c8c8c8;
 }
 
@@ -101,4 +97,8 @@ font-family: 'IM Fell DW Pica', serif;
 
 .nopad {
   padding: -15px;
+}
+
+.well blockquote {
+border-color: rgba(87,54,142,0.4);
 }

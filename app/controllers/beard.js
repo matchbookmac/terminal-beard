@@ -29,6 +29,13 @@ export default Ember.Controller.extend({
         beard.save();
       });
       this.set('newReview', false);
+
+      this.setProperties({
+        author: "",
+        body:   "",
+        rating: this.get('selectedRating')
+      });
+
       this.transitionToRoute('beard', beard.id);
     },
     delete: function() {

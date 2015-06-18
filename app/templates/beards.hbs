@@ -10,7 +10,10 @@
   <br>
     <ul class="list-unstyled">
       {{#each beard in model}}
-        <li><span class="muted">{{post-date beard.date}}</span>{{#link-to 'beard' beard.id}}<p class="lead fancyfont">{{beard.name}}</p>{{/link-to}}</li>
+        <li>
+          {{#link-to 'beard' beard.id}}<span class="lead fancyfont">{{beard.name}}</span>{{/link-to}}
+          <p><span class="muted">Born {{beard-birth beard.date}}</span></p>
+        </li>
       {{/each}}
     </ul>
   </div>
@@ -22,9 +25,13 @@
             {{#link-to 'beard' beard.id}}
               <div class="thumbnail" style="background-image: url({{beard.picture}})">
                 <div class="item">
-                  <p class="lead text-center fancyfont vertical-align">
-                    {{beard.name}}
-                  </p>
+                  <div class="lead text-center fancyfont vertical-align">
+                    <p >
+                      {{beard.name}}
+                      <br>
+                      {{repeat-stars beard.avgRating}}
+                    </p>
+                  </div>
                 </div>
               </div>
             {{/link-to}}

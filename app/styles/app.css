@@ -25,6 +25,7 @@ nav .active {
 
 .item {
   background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
   height: 136.25px;
 }
 

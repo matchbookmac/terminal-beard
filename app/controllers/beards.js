@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
         name:    this.get('name'),
         picture: this.get('picture'),
         type:    this.get('selectedType'),
-        date:    this.get('date'),
+        date:    this.get('startDate'),
         length:  this.get('length'),
         width:   this.get('width'),
         girth:   this.get('girth'),

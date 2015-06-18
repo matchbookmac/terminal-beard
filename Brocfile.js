@@ -23,5 +23,7 @@ app.import('bower_components/bootstrap/dist/css/bootstrap.css.map');
 
 app.import('bower_components/moment/min/moment.min.js');
 
+app.import('node_modules/handlebars-helper-repeat/index.js');
+
 
 module.exports = app.toTree();

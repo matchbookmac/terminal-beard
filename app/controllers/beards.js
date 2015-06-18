@@ -12,12 +12,13 @@ export default Ember.Controller.extend({
       var beard = this.store.createRecord('beard', {
         name:    this.get('name'),
         picture: this.get('picture'),
-        type:    this.get('type'),
+        type:    this.get('selectedType'),
         date:    this.get('date'),
         length:  this.get('length'),
         width:   this.get('width'),
         girth:   this.get('girth'),
-        density: this.get('density')
+        density: this.get('density'),
+        avgRating: 'No Reviews Yet'
       });
       beard.save();
       this.setProperties({

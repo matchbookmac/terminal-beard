@@ -11,10 +11,19 @@ export default Ember.Controller.extend({
     },
     submitReview: function() {
       var beard = this.get('model');
+      var allRatings = beard.get('reviews').forEach( function(review) { return review.get('ratings') });
       var review = this.store.createRecord('review', {
         author: this.get('author'),
         body: this.get('body'),
+        rating: this.get('selectedRating')
       });
+      var sum = parseInt(this.get('selectedRating'));
+      allRatings.forEach(function (rating) {
+        sum += parseInt(rating.get('rating'));
+      });
+      var avgRating = sum/(parseInt(allRatings.get('length')) + 1);
+      beard.set('avgRating', avgRating).save();
+
       review.save().then(function() {
         beard.get('reviews').pushObject(review);
         beard.save();
@@ -29,7 +38,19 @@ export default Ember.Controller.extend({
     },
     deleteReview: function(review) {
       review.destroyRecord();
-
+      var beard = this.get('model');
+      var sum = 0;
+      var allRatings = beard.get('reviews').forEach( function(review) { return review.get('ratings') });
+      allRatings.forEach(function (rating) {
+        sum += parseInt(rating.get('rating'));
+      });
+      var avgRating = sum/(parseInt(allRatings.get('length')));
+      if (avgRating) {
+        beard.set('avgRating', avgRating).save();
+      } else {
+        beard.set('avgRating', 'No Reviews Yet').save();
+      }
+      beard.save();
       this.transitionToRoute('beard', beard.id);
     }
 

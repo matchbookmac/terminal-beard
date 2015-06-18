@@ -8,6 +8,9 @@
   </div>
   <div class="col-md-7 well">
     <p class="lead">
+      Rating: {{model.avgRating}}
+    </p>
+    <p class="lead">
       Type: {{model.type}}
     </p>
     <p class="lead">
@@ -67,6 +70,11 @@
           <blockquote>
             <p>
               {{review.body}}
+
+              {{review.rating}}
+
+              {{repeat-stars review.rating}}
+
               <button class="btn btn-danger btn-xs pull-right"{{action 'deleteReview' review}}>X</button>
             </p>
             <footer><cite>{{review.author}}</cite></footer>

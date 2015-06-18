@@ -2,6 +2,7 @@ import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
+// import Repeat from './node_modules/handlebars-helper-repeat';
 
 var App;
 
@@ -12,6 +13,9 @@ App = Ember.Application.extend({
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver
 });
+
+// var helper = require('node_modules/handlebars-helper-repeat/index.js');
+// var moment = require('moment');
 
 Ember.deprecate = function(){};
 

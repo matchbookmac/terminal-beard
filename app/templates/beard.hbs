@@ -67,6 +67,7 @@
           <blockquote>
             <p>
               {{review.body}}
+              <button class="btn btn-danger btn-xs pull-right"{{action 'deleteReview' review}}>X</button>
             </p>
             <footer><cite>{{review.author}}</cite></footer>
           </blockquote>

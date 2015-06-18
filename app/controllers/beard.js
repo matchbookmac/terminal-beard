@@ -3,6 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   newReview: false,
   needs: 'beard',
+  selectedRating: '1',
+  ratings: ['1','2','3','4','5'],
   actions: {
     addReview: function () {
       this.get('newReview') ? this.set('newReview', false) : this.set('newReview', true);
@@ -24,6 +26,12 @@ export default Ember.Controller.extend({
       this.get('model').destroyRecord();
 
       this.transitionToRoute('beards');
+    },
+    deleteReview: function(review) {
+      review.destroyRecord();
+
+      this.transitionToRoute('beard', beard.id);
     }
+
   }
 });

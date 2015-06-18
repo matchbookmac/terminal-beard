@@ -2,7 +2,11 @@
   <div class="form-horizontal">
     <div class="form-group">
       <label for="author" class="control-label">Your Name</label>
-        {{input value=author type="text" class="form-control"}}
+        {{input value=author type="text" class="form-control" required="required"}}
+    </div>
+    <div class="form-group">
+      <label for="author" class="control-label">Rating:</label>
+      {{view "select" content=ratings value=selectedRating class="form-control" required="required"}}
     </div>
   </div>
   <div class="form-horizontal">

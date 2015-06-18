@@ -2,6 +2,12 @@
 
 This README outlines the details of collaborating on this Ember application.
 
+You can visit the app at:
+
+(http://artist-chipmunk-17212.bitballoon.com/)
+
+May the beard be with you.
+
 This is an app written using Ember-cli.  It is a app to rate beards.  Users can build a beard profile and have their beards rated on specific criteria.  There is also a forum included where users can create discussion about beards.
 
 Beard images use urls and not uplaoding.
@@ -29,15 +35,6 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
 
 ### Building
 

@@ -36,6 +36,9 @@
     "emberfire": "1.4.5"
   },
   "dependencies": {
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-static-compiler": "^0.2.1",
+    "glyphicons-css": "^1.0.0",
     "handlebars-helper-repeat": "^0.3.1"
   }
 }

@@ -71,11 +71,10 @@
             <p>
               {{review.body}}
 
-              {{review.rating}}
 
-              {{repeat-stars review.rating}}
 
               <button class="btn btn-danger btn-xs pull-right"{{action 'deleteReview' review}}>X</button>
+              <span class="pull-right">Rating: <span class="glyphicons glyphicons-star"></span>{{repeat-stars review.rating}}&nbsp;&nbsp;&nbsp;</span>
             </p>
             <footer><cite>{{review.author}}</cite></footer>
           </blockquote>
